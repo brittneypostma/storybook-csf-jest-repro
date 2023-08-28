@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"isolatedModules": false,
+		"esModuleInterop": true,
+		"moduleResolution": "Node",
+		"paths": {
+			"$lib": ["src/lib"]
+		}
+	},
+	"exclude": ["src/**"],
+	"include": ["src/**/*.spec.(ts|js)"]
+}
