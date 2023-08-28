@@ -1,14 +1,14 @@
-import { Http } from '@lib/ApiSerjestce';
-import * as ApiSerjestce from '@lib/ApiSerjestce';
+import { Http } from '@src/lib/ApiService';
+import * as ApiService from '@src/lib/ApiService';
 import App from '../../src/routes/+page.svelte';
 import { render, cleanup, fireEvent, waitFor } from '@testing-library/svelte';
 import { tick } from 'svelte';
 import { jest, describe, it, expect, beforeEach } from '@jest/globals';
 
-jest.mock("@lib/ApiSerjestce");
+jest.mock("@src/lib/ApiService");
 
-// jest.mock("@shared/svelte/Modules/ApiSerjestce", () => ({
-//   ...jest.requireActual("@shared/svelte/Modules/ApiSerjestce.ts"),
+// jest.mock("@shared/svelte/Modules/ApiService", () => ({
+//   ...jest.requireActual("@shared/svelte/Modules/ApiService.ts"),
 //   Http: jest.fn(() => Promise.resolve()),
 // }));
 
@@ -32,7 +32,7 @@ describe('Mock test 2', () => {
     })
   );
   it('uses mockImplementation to call an internal success callback', () => {
-    const getSpy = jest.spyOn(ApiSerjestce, 'callbackRunner');
+    const getSpy = jest.spyOn(ApiService, 'callbackRunner');
     const { getByText } = render(App, { props: {} });
     expect(getByText('count is 0'));
 
