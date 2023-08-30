@@ -23,6 +23,7 @@
 		"@storybook/addon-interactions": "^7.4.0-alpha.1",
 		"@storybook/addon-links": "^7.4.0-alpha.1",
 		"@storybook/addon-storyshots": "^7.3.2",
+		"@storybook/addon-svelte-csf": "^4.0.0",
 		"@storybook/blocks": "^7.4.0-alpha.1",
 		"@storybook/svelte": "^7.4.0-alpha.1",
 		"@storybook/sveltekit": "^7.4.0-alpha.1",
